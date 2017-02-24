@@ -1,13 +1,5 @@
 #loading dataframe from github
 usa_airports <- read.csv("https://raw.githubusercontent.com/jflam/VSBlogPost/master/usa_airports.dat", stringsAsFactors = TRUE)
-head(usa_airports)
-#library(DT)
 library(dplyr)
-#san_diego_airports <- subset(usa_airports, city == "San Diego")
-#datatable(san_diego_airports[, c("name", "city", "country", "IATA_FAA", "lat", "lon", "altitude")])
-#head(san_diego_airports)
-#san_diego_airports_USA <- filter(san_diego_airports, grepl('America', san_diego_airports$Region, TRUE))
-#san_diego_airports_USA <- san_diego_airports %>% filter(grepl('America', san_diego_airports$Region, TRUE))
-#san_diego_airports <- usa_airports %>% filter(grepl('America', usa_airports$Region, TRUE)) %>% filter(grepl('San Diego', usa_airports$city, TRUE))
 san_diego_airports <- usa_airports %>% filter(grepl('America', usa_airports$Region, TRUE), grepl('San Diego', usa_airports$city, TRUE)) 
 head(san_diego_airports)
