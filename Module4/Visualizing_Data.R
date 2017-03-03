@@ -64,7 +64,7 @@ plot.cols2 = c("length",
                "engine.size",
                "city.mpg",
                "price")
-lapply(plot.cols2, auto.hist)
+#lapply(plot.cols2, auto.hist)
 
 
 #FR
@@ -79,6 +79,8 @@ auto.hist_cylinders = function(x) {
     ## Create the histogram
     ggplot(auto.price, aes_string(x)) +
     geom_histogram(aes(y = ..count..), binwidth = bw) +
-    facet_grid(. ~ num.of.cylinder) +
+    facet_grid(. ~ num.of.cylinders) +
     ggtitle(title)
 }
+
+lapply(plot.cols2, auto.hist_cylinders)
