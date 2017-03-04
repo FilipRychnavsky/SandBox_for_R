@@ -1,23 +1,7 @@
 # To install missing packages
 # install.packages("AzureML")
-#install.packages("repr")
+# install.packages("repr")
 library("AzureML")
-library("repr")
-#ws <- workspace(
-  #id = "546ef1874ab74d73bb93ff30fb82315b",
-  #auth = "43750ef807244655914318cd5dee53fc",
-  #api_endpoint = "https://studioapi.azureml.net"
-#)
-#ds <- download.datasets(
-  #dataset = ws,
-  #name = "Adult Census Income Binary Classification dataset"
-#)
-#head(ds)
-
-#library("AzureML")
-#ws = workspace()
-#Income = download.datasets(ws, "Adult Census Income Binary Classification dataset")
-#str(Income)
 
 if (file.exists("~/.azureml/settings.json")) {
     ws <- workspace()
@@ -33,8 +17,6 @@ dataset = ws,
 name = "Adult Census Income Binary Classification dataset"
 )
 
-library("AzureML")
-#ws = workspace()
 Income = download.datasets(ws, "Adult Census Income Binary Classification dataset")
 str(Income)
 
