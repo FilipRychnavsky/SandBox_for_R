@@ -33,7 +33,10 @@ dataset = ws,
 name = "Adult Census Income Binary Classification dataset"
 )
 
-Income = ws
+library("AzureML")
+#ws = workspace()
+Income = download.datasets(ws, "Adult Census Income Binary Classification dataset")
+str(Income)
 
 ## Bar plot of categorical features
 bar.income = function(x){
