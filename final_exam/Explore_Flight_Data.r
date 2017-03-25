@@ -1,13 +1,21 @@
+#install.packages('gridExtra')
+#install.packages('ggplot2')
 
+
+library(ggplot2)
 library("AzureML")
-ws <- workspace()
-dat <- download.intermediate.dataset(
-  ws,
-  experiment = "546ef1874ab74d73bb93ff30fb82315b.f-id.b5d091662c724124b94205867566776c",
-  node_id = "17b5bd32-22d5-42db-9228-8b29fc80b841-1475",
-  port_name = "Results dataset",
-  data_type_id = "GenericCSV"
-)
+#ws <- workspace()
+
+#dat <- download.intermediate.dataset(
+  #ws,
+  #experiment = "546ef1874ab74d73bb93ff30fb82315b.f-id.b5d091662c724124b94205867566776c",
+  #node_id = "17b5bd32-22d5-42db-9228-8b29fc80b841-1475",
+  #port_name = "Results dataset",
+  #data_type_id = "GenericCSV"
+#)
+
+dat = read.csv("C:/Users/Filip/Documents/Data Mining Experiments/DAT203_1/Flights_cleaned.csv")
+
 
 head(dat)
 
@@ -31,9 +39,6 @@ sd(dat[, 'ArrDelay'])
 sd(dat[, 'ArrDelay'], na.rm=TRUE)
 
 sd(dat[, 'ArrDelay'], na.rm=FALSE)
-
-install.packages('ggplot2')
-install.packages('gridExtra')
 
 require(ggplot2)
 require(gridExtra)
@@ -82,7 +87,7 @@ plotstats <- function(df, col, bins = 30){
 plotstats(dat, 'ArrDelay')
 
 ## Function to plot conditioned histograms
-install.packages('gridExtra')
+
 options(repr.plot.width=6, repr.plot.height=3)
 Plotting_Delays = function(x) {
   library(ggplot2)
@@ -109,8 +114,6 @@ plot.cols2 = c("DepDelay",
               "Month")
 lapply(plot.cols2, Plotting_Delays)
 
-install.packages('gridExtra')
- install.packages('ggplot2')
 
 ## Scatter plot using color to differentiate points
 Scatter_Flights_conditioned = function(x) {
