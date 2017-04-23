@@ -11,6 +11,8 @@ Project("{DA7A21FA-8162-4350-AD77-A8D1B671F3ED}") = "Module4", "Module4\Module4.
 EndProject
 Project("{DA7A21FA-8162-4350-AD77-A8D1B671F3ED}") = "final_exam", "final_exam\final_exam.rxproj", "{409F63CA-480F-49E4-ACFE-E0D2D0E5C507}"
 EndProject
+Project("{DA7A21FA-8162-4350-AD77-A8D1B671F3ED}") = "expenses_2016", "expenses_2016\expenses_2016.rxproj", "{F62DD998-F601-462E-9AC2-FA68F7541EC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{409F63CA-480F-49E4-ACFE-E0D2D0E5C507}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{409F63CA-480F-49E4-ACFE-E0D2D0E5C507}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{409F63CA-480F-49E4-ACFE-E0D2D0E5C507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F62DD998-F601-462E-9AC2-FA68F7541EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F62DD998-F601-462E-9AC2-FA68F7541EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F62DD998-F601-462E-9AC2-FA68F7541EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F62DD998-F601-462E-9AC2-FA68F7541EC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
