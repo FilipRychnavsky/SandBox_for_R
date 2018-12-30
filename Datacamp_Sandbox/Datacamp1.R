@@ -1,2 +1,5 @@
 myVector <- c(1, 2, 3)
 print(myVector)
+install.packages("ggvis")
+library("ggvis")
+search()
