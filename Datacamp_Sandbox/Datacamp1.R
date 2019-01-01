@@ -60,3 +60,16 @@ time2 <- as.POSIXct(str2, format = "%Y-%m-%d %H:%M:%S")
 # Convert times to formatted strings
 format(time1, "%M")
 format(time2, "%I:%M %p")
+
+# login and logout are already defined in the workspace
+# Calculate the difference between login and logout: time_online
+time_online <- logout - login
+
+# Inspect the variable time_online
+print(time_online)
+
+# Calculate the total time online
+print(sum(time_online))
+
+# Calculate the average time online
+print(mean(time_online))
