@@ -63,13 +63,14 @@ format(time2, "%I:%M %p")
 
 # login and logout are already defined in the workspace
 # Calculate the difference between login and logout: time_online
-time_online <- logout - login
 
-# Inspect the variable time_online
-print(time_online)
+#time_online <- logout - login
 
-# Calculate the total time online
-print(sum(time_online))
+## Inspect the variable time_online
+#print(time_online)
 
-# Calculate the average time online
-print(mean(time_online))
+## Calculate the total time online
+#print(sum(time_online))
+
+## Calculate the average time online
+#print(mean(time_online))
