@@ -18,7 +18,7 @@ head(diaperData)
 # Urin - Sortierung muss nach group by sein
 urin_by_date <- diaperData %>%
   group_by(defecationDate) %>%
-  #filter(excreta == 'U') %>%
+  filter(excreta == 'U') %>%
   summarize(totalWeightPerDay = sum(weight))
   
 urin_by_date
@@ -28,6 +28,20 @@ ggplot(urin_by_date, aes(x = defecationDate,
                          y = totalWeightPerDay)) +
       geom_point() +
   expand_limits(y = 0)
+
+# group by date und excreta
+diaper_by_date <- diaperData %>%
+  group_by(defecationDate, excreta) %>%
+  summarize(totalWeightPerDay = sum(weight))
+
+diaper_by_date
+
+ggplot(diaper_by_date, aes(x = defecationDate,
+                         y = totalWeightPerDay,
+                         color = excreta)) +
+  geom_point() +
+  expand_limits(y = 0)
+
 
 
 # test, wie ich auf DateTime einschränken kann
