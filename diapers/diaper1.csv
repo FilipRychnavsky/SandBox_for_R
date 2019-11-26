@@ -1,4 +1,4 @@
-datetimeText, weight,	excreta
+defecationDatetimeText, weight,	excreta
 "10.11.2019 05:00",100,U
 "10.11.2019 09:00",105,U
 "10.11.2019 10:30",60,F
