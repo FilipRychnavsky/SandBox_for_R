@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 
 dir()
-path <- file.path(".", "SandBox_for_R/diapers", "diaper1.csv")
+path <- file.path(".", "diaper1.csv")
 path
 #diaperData <- read.csv(path, header = TRUE, tz="", format='%d/%m/%Y %H:%M')
 diaperData <- read.csv(path, header = TRUE)
@@ -44,7 +44,7 @@ ggplot(diaper_by_date, aes(x = defecationDate,
 
 
 
-# test, wie ich auf DateTime einschränken kann
+# test, wie ich auf DateTime einschr?nken kann
 # diaperData %>%
 #   filter(diaperData$defecationDateTime> "2019-10-11 12:00")
 # diaperData %>%
