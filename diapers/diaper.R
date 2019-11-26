@@ -44,7 +44,8 @@ ggplot(diaper_by_date, aes(x = defecationDate,
   #geom_point() +
   geom_col() +
   expand_limits(y = 0) +
-  ggtitle("feces and urination")
+  ggtitle("feces and urination per day") +
+  labs(x = "date", y = "weight in g")
   
 
 
