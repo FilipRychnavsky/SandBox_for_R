@@ -8,9 +8,11 @@ path <- file.path(".", "diaper1.csv")
 path
 #diaperData <- read.csv(path, header = TRUE, tz="", format='%d/%m/%Y %H:%M')
 diaperData <- read.csv(path, header = TRUE)
-diaperData$defecationDateTime <- as.POSIXct(diaperData$defecationDatetimeText, format = "%m.%d.%Y %H:%M")
+diaperData$defecationDateTime <- as.POSIXct(diaperData$defecationDatetimeText, format = "%d.%m.%Y %H:%M")
 diaperData$defecationDate <- as.Date(diaperData$defecationDateTime)
 
+diaperData  %>%
+   arrange(defecationDate)
 str(diaperData)
 head(diaperData)
 
