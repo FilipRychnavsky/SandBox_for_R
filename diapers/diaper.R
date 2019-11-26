@@ -15,19 +15,19 @@ str(diaperData)
 head(diaperData)
 
 #Datum - group by datum aus dem Defecation DateTime
-# Urin - Sortierung muss nach group by sein
-urin_by_date <- diaperData %>%
-  group_by(defecationDate) %>%
-  filter(excreta == 'U') %>%
-  summarize(totalWeightPerDay = sum(weight))
-  
-urin_by_date
-
-# ploting TotalWeightperDay in Verlauf der Zeit
-ggplot(urin_by_date, aes(x = defecationDate,
-                         y = totalWeightPerDay)) +
-      geom_point() +
-  expand_limits(y = 0)
+# # Urin - Sortierung muss nach group by sein
+# urin_by_date <- diaperData %>%
+#   group_by(defecationDate) %>%
+#   filter(excreta == 'U') %>%
+#   summarize(totalWeightPerDay = sum(weight))
+#   
+# urin_by_date
+# 
+# # ploting TotalWeightperDay in Verlauf der Zeit
+# ggplot(urin_by_date, aes(x = defecationDate,
+#                          y = totalWeightPerDay)) +
+#       geom_point() +
+#   expand_limits(y = 0)
 
 # group by date und excreta
 diaper_by_date <- diaperData %>%
