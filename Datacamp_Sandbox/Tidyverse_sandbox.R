@@ -12,3 +12,4 @@ gapminder
 # Filter for the year 1957, then arrange in descending order of population
 
 gapminder %>% filter(year == 1957) %>% arrange(desc(pop))
+head(gapminder)

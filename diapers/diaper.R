@@ -40,7 +40,8 @@ diaper_by_date
 # der col diagramm bringt beide Arten von Ausscheidungen aufeinander (visuelle Summierung). Fill gibt bestimmte Farbe.
 ggplot(diaper_by_date, aes(x = defecationDate,
                          y = totalWeightPerDay,
-                         fill = excreta)) +
+                         fill =
+                          excreta)) +
   #geom_point() +
   geom_col() +
   expand_limits(y = 0) +
