@@ -3,7 +3,7 @@
 # Load the gapminder package
 
 library(gapminder)
-
+ 
 # Load the dplyr package
 library(dplyr)
 

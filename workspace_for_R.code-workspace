@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "diapers"
+		},
+		{
+			"path": "Datacamp_Sandbox"
 		}
 	],
 	"settings": {}
